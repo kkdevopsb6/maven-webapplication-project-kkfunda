@@ -136,9 +136,9 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.apache.maven-war-plugins</groupId>
+				<groupId>org.apache.maven-war-plugin:2.2:war</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>2.0</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
