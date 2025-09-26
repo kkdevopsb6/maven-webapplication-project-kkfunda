@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>KK FUNDA Home Page</title>
+<title>Hemanth Varupula Home Page</title>
 <link href="images/kkfunda.jpg" rel="icon">
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA SRE Portal 🚀</h1>
+    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -75,6 +75,7 @@
     <!-- Contact Info -->
     <div class="info-card text-center">
         <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
+        <img src="https://static.toiimg.com/thumb/msid-123320927,imgsize-40126,width-400,resizemode-4/123320927.jpg" height="200px" width "120">
         <h4>KK FUNDA</h4>
         <p><b>Address:</b> Martha Halli, Bangalore</p>
         <p><b>Phone:</b> +91-9676831734</p>
