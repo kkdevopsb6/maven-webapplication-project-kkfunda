@@ -1,138 +1,126 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.net.*" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>KK FUNDA | Home</title>
+    <title>Amazon Clone - KK FUNDA</title>
     <link rel="icon" href="images/kkfunda.jpg">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         body {
-            background-color: #121212;
-            color: #f1c40f;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
         }
-
-        header {
-            background: linear-gradient(90deg, #000000, #f1c40f);
-            padding: 25px;
-            text-align: center;
-            border-bottom: 5px solid #f1c40f;
+        .navbar {
+            background-color: #232f3e;
         }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #fff;
+        .navbar-brand, .nav-link {
+            color: white !important;
         }
-
-        header h3 {
-            color: #ffe066;
-            font-weight: 300;
-        }
-
-        .info-card {
-            background: #1e1e1e;
-            border-left: 5px solid #f1c40f;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 30px;
-            box-shadow: 0px 5px 20px rgba(255, 255, 0, 0.1);
-        }
-
-        .info-card h3, .info-card h4 {
-            color: #f1c40f;
-        }
-
-        .btn-yellow {
-            background-color: #f1c40f;
-            color: #000;
-            border: none;
-        }
-
-        .btn-yellow:hover {
-            background-color: #ffd700;
-            color: #000;
-        }
-
-        footer {
-            background-color: #000;
-            color: #f1c40f;
+        .section {
+            display: none;
             padding: 20px;
-            margin-top: 50px;
+        }
+        .active-section {
+            display: block;
+        }
+        footer {
+            background: #232f3e;
+            color: white;
             text-align: center;
-        }
-
-        a {
-            color: #f1c40f;
-        }
-
-        a:hover {
-            color: #fff200;
-            text-decoration: underline;
-        }
-
-        .logo {
-            border: 3px solid #f1c40f;
+            padding: 15px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>🚀 Welcome to KK FUNDA SRE Portal 🚀</h1>
-    <h3>Training | Development | Consulting</h3>
-</header>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">KK Amazon Clone</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('products')">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('cart')">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('profile')">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<div class="container">
+<!-- Sections -->
+<div class="container mt-4">
 
-    <!-- Server Info -->
-    <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
-        <hr>
-        <%
-            InetAddress inetAddress = InetAddress.getLocalHost();
-            String ip = inetAddress.getHostAddress();
-        %>
-        <p><strong>Server Host Name:</strong> <%= inetAddress.getHostName() %></p>
-        <p><strong>Server IP Address:</strong> <%= ip %></p>
+    <!-- Home Section -->
+    <div id="home" class="section active-section">
+        <h2>🏠 Welcome to KK FUNDA Amazon Clone</h2>
+        <p>This is the Home page. Discover great products, offers, and more.</p>
     </div>
 
-    <!-- Client Info -->
-    <div class="info-card">
-        <h3>💻 Client Side Information</h3>
-        <hr>
-        <p><strong>Client IP Address:</strong> <%= request.getRemoteAddr() %></p>
-        <p><strong>Client Host Name:</strong> <%= request.getRemoteHost() %></p>
+    <!-- Products Section -->
+    <div id="products" class="section">
+        <h2>🛒 Products</h2>
+        <div class="row">
+            <%-- Dummy Product Cards --%>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">₹999</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">₹1,499</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more products as needed -->
+        </div>
     </div>
 
-    <!-- Contact Info -->
-    <div class="info-card text-center">
-        <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow logo">
-        <h4>KK FUNDA</h4>
-        <p><strong>Address:</strong> Martha Halli, Bangalore</p>
-        <p><strong>Phone:</strong> +91-9676831734</p>
-        <p><strong>Email:</strong> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
-        <a href="mailto:kkeducation@gmail.com" class="btn btn-yellow mt-3">📧 Mail to KK FUNDA</a>
+    <!-- Cart Section -->
+    <div id="cart" class="section">
+        <h2>🛍️ Your Cart</h2>
+        <p>Your cart is currently empty. Start shopping now!</p>
     </div>
 
-    <!-- Service Links -->
-    <div class="info-card text-center">
-        <h4>⚙️ Our Services</h4>
-        <a href="services/employee/getEmployeeDetails" class="btn btn-yellow mt-2">👨‍💼 Get Employee Details</a>
+    <!-- Profile Section -->
+    <div id="profile" class="section">
+        <h2>👤 Profile</h2>
+        <p><b>Name:</b> KK FUNDA User</p>
+        <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
+        <p><b>Location:</b> Bangalore, India</p>
     </div>
 
 </div>
 
+<!-- Footer -->
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/" target="_blank">KK FUNDA</a></small></p>
+    <p>© 2025 KK FUNDA Amazon Clone</p>
+    <p><small>Powered by JSP & Bootstrap</small></p>
 </footer>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript for Navigation -->
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(sec => sec.classList.remove('active-section'));
+        document.getElementById(sectionId).classList.add('active-section');
+    }
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
