@@ -61,7 +61,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">🛒 KK FUNDA Store</a>
+        <a class="navbar-brand" href="#">🛒 KK FUNDA Store </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
