@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hemanth Varupula Home Page</title>
+<title>Hemanth Varupula DevOps Home Page , welcome you to my youtube channel</title>
 <link href="images/kkfunda.jpg" rel="icon">
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
         margin: 10px 0;
     }
     .info-card {
-        background: white;
+        background: blue;
         border-radius: 10px;
         box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
         padding: 20px;
