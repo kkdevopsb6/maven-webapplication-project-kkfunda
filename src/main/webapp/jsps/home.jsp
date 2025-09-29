@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀,  welcome you to my youtube channel</h1>
+    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀, Lerning Devops with Hemanth</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
