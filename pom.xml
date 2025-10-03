@@ -5,7 +5,7 @@
 	<groupId>com.kk</groupId>
 	<artifactId>maven-web-application-kkfunda</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -104,7 +104,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>/http://18.134.163.12:8081/repository/Lyca-snapshot/</url>
+	      <url>http://18.134.163.12:8081/repository/Lyca-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
