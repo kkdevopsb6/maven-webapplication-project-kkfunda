@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://18.175.218.117:8081/repository/Lyca-release/</url>
+	      <url>http://18.134.163.12:8081/repository/Lyca-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://18.175.218.117:8081/repository/Lyca-snapshot/</url>
+	      <url>/http://18.134.163.12:8081/repository/Lyca-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
