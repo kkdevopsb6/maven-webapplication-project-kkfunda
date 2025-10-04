@@ -1,79 +1,102 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="javax.xml.parsers.DocumentBuilder"%>
-<%@ page import="javax.xml.parsers.DocumentBuilderFactory"%>
-<%@ page import="org.w3c.dom.Document"%>
-<%@ page import="org.w3c.dom.Element"%>
-<%@ page import="org.w3c.dom.NodeList"%>
-<%@ page import="java.io.File"%>
+<%@ page import="java.net.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Student Login</title>
-    <style>
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; }
-        .login-container { background-color: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; text-align: center; }
-        h2 { margin-bottom: 20px; color: #333; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        input[type="submit"] { background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
-        .error { color: red; margin-bottom: 10px; }
-    </style>
+<meta charset="UTF-8">
+<title>KK FUNDA Home Page</title>
+<link href="images/kkfunda.jpg" rel="icon">
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background: #f9f9f9;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    h1, h3 {
+        margin: 10px 0;
+    }
+    .info-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+    }
+    footer {
+        margin-top: 30px;
+        background: #222;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    footer a {
+        color: #00c6ff;
+        text-decoration: none;
+    }
+</style>
 </head>
 <body>
 
-<%
-    String errorMessage = "";
-    if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        boolean loginSuccessful = false;
+<header>
+    <h1>🚀 Welcome to KK FUNDA DEVOPS SRE Portal 🚀</h1>
+    <h3>Training | Development | Consulting</h3>
+</header>
 
-        try {
-            // Path to the XML file
-            String path = application.getRealPath("/WEB-INF/data/students.xml");
-            File xmlFile = new File(path);
-            
-            if (xmlFile.exists()) {
-                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder builder = factory.newDocumentBuilder();
-                Document doc = builder.parse(xmlFile);
-                doc.getDocumentElement().normalize();
+<div class="container">
 
-                NodeList studentList = doc.getElementsByTagName("student");
-                for (int i = 0; i < studentList.getLength(); i++) {
-                    Element studentElement = (Element) studentList.item(i);
-                    String storedUsername = studentElement.getElementsByTagName("username").item(0).getTextContent();
-                    String storedPassword = studentElement.getElementsByTagName("password").item(0).getTextContent();
-                    
-                    if (username.equals(storedUsername) && password.equals(storedPassword)) {
-                        session.setAttribute("username", username);
-                        response.sendRedirect("welcome.jsp");
-                        return;
-                    }
-                }
-            } else {
-                errorMessage = "Error: Student data file not found.";
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            errorMessage = "An error occurred during login.";
-        }
-        
-        if (!loginSuccessful) {
-            errorMessage = "Invalid username or password.";
-        }
-    }
-%>
+    <!-- Server Info -->
+    <div class="info-card">
+        <h3>🌐 Server Side Information</h3>
+        <hr>
+        <%
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            String ip = inetAddress.getHostAddress();
+            out.println("<p><b>Server Host Name:</b> " + inetAddress.getHostName() + "</p>");
+            out.println("<p><b>Server IP Address:</b> " + ip + "</p>");
+        %>
+    </div>
 
-<div class="login-container">
-    <h2>Student Login</h2>
-    <div class="error"><%= errorMessage %></div>
-    <form action="login.jsp" method="post">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Login">
-    </form>
+    <!-- Client Info -->
+    <div class="info-card">
+        <h3>💻 Client Side Information</h3>
+        <hr>
+        <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
+        <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="info-card text-center">
+        <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
+        <h4>KK FUNDA</h4>
+        <p><b>Address:</b> Martha Halli, Bangalore</p>
+        <p><b>Phone:</b> +91-9676831734</p>
+        <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
+        <a href="mailto:kkeducation@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+    </div>
+
+    <!-- Service Links -->
+    <div class="info-card text-center">
+        <h4>⚙️ Our Services</h4>
+        <p><a href="services/employee/getEmployeeDetails" class="btn btn-success">Get Employee Details</a></p>
+    </div>
+
 </div>
+
+<footer>
+    <p>© 2024 KK FUNDA Training & Development Center</p>
+    <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
