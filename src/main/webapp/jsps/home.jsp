@@ -878,7 +878,7 @@
             background: #50E3C2;
             color: #fff;
         }
-        /* More Sections... */
+        /* Additional Sections... */
         #video {
             padding: 100px 40px;
             background: #F4F7FA;
@@ -981,6 +981,7 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
+<![CDATA[
         const { useState, useEffect } = React;
 
         const productsData = [
@@ -1140,7 +1141,7 @@
                         </div>
                         <div className="pagination">
                             {Array.from({length: Math.ceil(filteredProducts.length / productsPerPage)}).map((_, i) => (
-                                <button key={i} className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`} onClick={() => paginate(i + 1)}>{i + 1}</button>
+                                <button key={i} className={"page-btn " + (currentPage == i + 1 ? 'active' : '')} onClick={() => paginate(i + 1)}>{i + 1}</button>
                             ))}
                         </div>
                     </section>
@@ -1197,7 +1198,7 @@
                     <section id="promotions">
                         <h2>Current Promotions</h2>
                         <div className="promotions-grid">
-                            {[...Array(20)].map((_, index) => (
+                            {[...Array(6)].map((_, index) => (
                                 <div key={index} className="promo-card">
                                     <h3 className="promo-title">Promo {index + 1}</h3>
                                     <p className="promo-desc">Get 20% off on selected items.</p>
@@ -1209,7 +1210,7 @@
                     <section id="partners">
                         <h2>Our Partners</h2>
                         <div className="partners-grid">
-                            {[...Array(50)].map((_, index) => (
+                            {[...Array(14)].map((_, index) => (
                                 <img key={index} src={`https://source.unsplash.com/random/150x80/?partner,${index}`} alt={`Partner ${index + 1}`} className="partner-logo" />
                             ))}
                         </div>
@@ -1328,6 +1329,7 @@
         };
 
         ReactDOM.render(<App />, document.getElementById('root'));
+]]>
     </script>
 </body>
 </html>
