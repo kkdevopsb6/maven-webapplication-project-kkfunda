@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SUNEETHA DEVOPS Home Page</title>
-<link href="images/kkfunda.jpg" rel="icon">
+<title> DEVOPS Home Page</title>
+<link href="images/sr.jpg" rel="icon">
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to Suneetha Devops 🚀</h1>
+    <h1>🚀 Welcome to  Devops 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -75,7 +75,7 @@
     <!-- Contact Info -->
     <div class="info-card text-center">
         <img src="images/kkfunda.jpg" alt="SUNEETHA Logo" width="120" class="mb-3 rounded-circle shadow">
-        <h4>SUNEETHA</h4>
+        <h4>devops</h4>
         <p><b>Address:</b> Harrow, LONDON</p>
         <p><b>Phone:</b> +44-7123456789</p>
         <p><b>Email:</b> <a href="mailto:suneethadevops@gmail.com">suneethadevops@gmail.com</a></p>
@@ -91,7 +91,7 @@
 </div>
 
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
+    <p>© 2024 devops Training & Development Center</p>
     <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
 </footer>
 
