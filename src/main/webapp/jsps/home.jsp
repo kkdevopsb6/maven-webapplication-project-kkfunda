@@ -78,8 +78,8 @@
         <h4>devops</h4>
         <p><b>Address:</b> Harrow, LONDON</p>
         <p><b>Phone:</b> +44-7123456789</p>
-        <p><b>Email:</b> <a href="mailto:suneethadevops@gmail.com">suneethadevops@gmail.com</a></p>
-        <a href="mailto:suneethadevops@gmail.com" class="btn btn-primary mt-2">📧 Mail to SUNEETHA</a>
+        <p><b>Email:</b> <a href="mailto:devops@gmail.com">devops@gmail.com</a></p>
+        <a href="mailto:devops@gmail.com" class="btn btn-primary mt-2">📧 Mail to SUNEETHA</a>
     </div>
 
     <!-- Service Links -->
