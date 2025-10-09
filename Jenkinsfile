@@ -1,4 +1,9 @@
-
+properties([
+  pipelineTriggers([
+    pollSCM('H/1 * * * *'),           // Poll Git every 5 minutes
+    cron('* * * * *')                 // Build daily at midnight
+  ])
+])
 
 
 node
