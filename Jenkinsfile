@@ -1,11 +1,11 @@
+
+
+// ✅ This block enables periodic build every 1 minute
 properties([
   pipelineTriggers([
-    pollSCM('* * * * *'),           // Poll Git every 5 minutes
-    cron('* * * * *')                 // Build daily at midnight
+    cron('* * * * *') // Run every 1 minute
   ])
 ])
-
-
 node
 {
 
