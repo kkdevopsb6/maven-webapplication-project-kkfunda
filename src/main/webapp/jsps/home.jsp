@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Github webhook Welcome to KK FUNDA DEVOPS SRE Portal 🚀</h1>
+    <h1>🚀 Github hook webhook Welcome to KK FUNDA DEVOPS SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
