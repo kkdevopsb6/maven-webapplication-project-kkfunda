@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraMed Pharmacy - Aesthetic Modern E-Commerce for Health Essentials</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>AuraMed Pharmacy - Modern E-Commerce for Health Essentials</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles with Aesthetic Modern Theme */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +19,6 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-        /* Subtle Glitter Effects */
         .glitter-effect {
             position: relative;
             overflow: hidden;
@@ -44,7 +39,6 @@
             0% { transform: translate(0, 0) rotate(0deg); }
             100% { transform: translate(50%, 50%) rotate(360deg); }
         }
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -118,7 +112,6 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
-        /* Hero Section */
         #hero {
             height: 90vh;
             background: linear-gradient(135deg, #4A90E2 0%, #50E3C2 100%);
@@ -179,7 +172,6 @@
             from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Categories Section */
         #categories {
             padding: 100px 40px;
             background: #fff;
@@ -220,7 +212,6 @@
             font-weight: 500;
             color: #333;
         }
-        /* Products Section */
         #products {
             padding: 100px 40px;
             background: #F4F7FA;
@@ -320,7 +311,6 @@
         .add-to-cart:hover {
             background: #4A90E2;
         }
-        /* Pagination */
         .pagination {
             display: flex;
             justify-content: center;
@@ -344,7 +334,6 @@
             background: #50E3C2;
             color: #fff;
         }
-        /* Testimonials */
         #testimonials {
             padding: 100px 40px;
             background: linear-gradient(135deg, #4A90E2 0%, #50E3C2 100%);
@@ -382,7 +371,6 @@
             font-size: 1rem;
             font-weight: 500;
         }
-        /* Blog Section */
         #blog {
             padding: 100px 40px;
             background: #fff;
@@ -435,7 +423,6 @@
             font-size: 0.9rem;
             color: #4A90E2;
         }
-        /* Team Section */
         #team {
             padding: 100px 40px;
             background: #F4F7FA;
@@ -482,7 +469,6 @@
             font-weight: 300;
             color: #666;
         }
-        /* FAQ Section */
         #faq {
             padding: 100px 40px;
             background: #fff;
@@ -525,7 +511,6 @@
         .faq-item.active .faq-answer {
             display: block;
         }
-        /* Contact Section */
         #contact {
             padding: 100px 40px;
             background: linear-gradient(135deg, #4A90E2 0%, #50E3C2 100%);
@@ -565,174 +550,6 @@
             background: #50E3C2;
             color: #fff;
         }
-        /* Footer */
-        footer {
-            padding: 50px 40px;
-            background: #fff;
-            text-align: center;
-            border-top: 1px solid #E0E0E0;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        .footer-link {
-            color: #666;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-        .footer-link:hover {
-            color: #4A90E2;
-        }
-        .footer-copy {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        /* Modals */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease;
-        }
-        .modal.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1.5rem;
-            color: #666;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .close-btn:hover {
-            color: #4A90E2;
-        }
-        .cart-item {
-            display: flex;
-            align-items: center;
-            background: #F4F7FA;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        .cart-item-img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-        .cart-item-info {
-            flex: 1;
-        }
-        .cart-item-title {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .cart-item-price {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #4A90E2;
-        }
-        .remove-btn {
-            padding: 8px 20px;
-            background: #fff;
-            color: #4A90E2;
-            border: 1px solid #4A90E2;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        .remove-btn:hover {
-            background: #4A90E2;
-            color: #fff;
-        }
-        .cart-total {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #333;
-            margin: 30px 0;
-            text-align: right;
-        }
-        .checkout-btn {
-            padding: 15px 40px;
-            background: #50E3C2;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: 500;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s ease;
-        }
-        .checkout-btn:hover {
-            background: #4A90E2;
-        }
-        .product-detail-img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
-        .product-detail-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .product-detail-desc {
-            font-size: 1.1rem;
-            font-weight: 300;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .product-detail-info {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        .product-detail-price {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #4A90E2;
-            margin-bottom: 30px;
-        }
-        /* Additional Sections for Length */
         #promotions {
             padding: 100px 40px;
             background: #fff;
@@ -878,7 +695,6 @@
             background: #50E3C2;
             color: #fff;
         }
-        /* Additional Sections... */
         #video {
             padding: 100px 40px;
             background: #F4F7FA;
@@ -960,7 +776,169 @@
         .plan-btn:hover {
             background: #4A90E2;
         }
-        /* Scroll to Top */
+        footer {
+            padding: 50px 40px;
+            background: #fff;
+            text-align: center;
+            border-top: 1px solid #E0E0E0;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #4A90E2;
+        }
+        .footer-copy {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            transition: opacity 0.3s ease;
+        }
+        .modal.open {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover {
+            color: #4A90E2;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background: #F4F7FA;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .cart-item-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .cart-item-price {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4A90E2;
+        }
+        .remove-btn {
+            padding: 8px 20px;
+            background: #fff;
+            color: #4A90E2;
+            border: 1px solid #4A90E2;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .remove-btn:hover {
+            background: #4A90E2;
+            color: #fff;
+        }
+        .cart-total {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 30px 0;
+            text-align: right;
+        }
+        .checkout-btn {
+            padding: 15px 40px;
+            background: #50E3C2;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background: #4A90E2;
+        }
+        .product-detail-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .product-detail-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .product-detail-desc {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .product-detail-info {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .product-detail-price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #4A90E2;
+            margin-bottom: 30px;
+        }
         .scroll-top {
             position: fixed;
             bottom: 40px;
@@ -979,357 +957,471 @@
     </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel">
-<![CDATA[
-        const { useState, useEffect } = React;
-
+    <nav class="navbar">
+        <div class="logo">AuraMed Pharmacy</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search medicines..." id="search-input">
+        </div>
+        <div class="cart-icon" onclick="openCartModal()">
+            🛒 <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </nav>
+    <section id="hero" class="glitter-effect">
+        <h1>Your Trusted Online Medical Store</h1>
+        <p>Fast delivery, genuine products, and expert care for all your health needs.</p>
+        <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+    </section>
+    <section id="categories">
+        <h2>Browse Categories</h2>
+        <div class="categories-grid" id="categories-grid">
+        </div>
+    </section>
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="filters">
+            <select class="filter-select" id="category-filter" onchange="filterProducts()">
+                <option value="">All Categories</option>
+            </select>
+            <select class="filter-select" id="price-filter" onchange="filterProducts()">
+                <option value="">All Prices</option>
+                <option value="low">Under $20</option>
+                <option value="high">$20 and Above</option>
+            </select>
+        </div>
+        <div class="products-grid" id="products-grid">
+        </div>
+        <div class="pagination" id="pagination">
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-grid" id="testimonials-grid">
+        </div>
+    </section>
+    <section id="blog">
+        <h2>Health Blog</h2>
+        <div class="blog-posts" id="blog-posts">
+        </div>
+    </section>
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-grid" id="team-grid">
+        </div>
+    </section>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list" id="faq-list">
+        </div>
+    </section>
+    <section id="promotions">
+        <h2>Current Promotions</h2>
+        <div class="promotions-grid" id="promotions-grid">
+        </div>
+    </section>
+    <section id="partners">
+        <h2>Our Partners</h2>
+        <div class="partners-grid" id="partners-grid">
+        </div>
+    </section>
+    <section id="stats">
+        <h2>Our Achievements</h2>
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">10M+</div>
+                <div class="stat-label">Products Sold</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5M+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Partners</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4.9/5</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+        </div>
+    </section>
+    <section id="newsletter">
+        <h2>Subscribe to Newsletter</h2>
+        <div class="newsletter-form">
+            <input class="newsletter-input" placeholder="Your Email">
+            <button class="newsletter-btn">Subscribe</button>
+        </div>
+    </section>
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="https://example.com/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <section id="pricing">
+        <h2>Membership Plans</h2>
+        <div class="pricing-plans">
+            <div class="plan">
+                <h3 class="plan-title">Basic Plan</h3>
+                <div class="plan-price">$9.99/month</div>
+                <ul class="plan-features">
+                    <li>Free Shipping</li>
+                    <li>10% Discount</li>
+                    <li>Basic Support</li>
+                </ul>
+                <button class="plan-btn">Subscribe</button>
+            </div>
+            <div class="plan">
+                <h3 class="plan-title">Premium Plan</h3>
+                <div class="plan-price">$19.99/month</div>
+                <ul class="plan-features">
+                    <li>Free Express Shipping</li>
+                    <li>20% Discount</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="plan-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-form">
+            <input class="contact-input" placeholder="Your Name">
+            <input class="contact-input" placeholder="Your Email">
+            <textarea class="contact-input" placeholder="Your Message" rows="6"></textarea>
+            <button class="contact-btn">Send Message</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-links">
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms of Service</a>
+            <a class="footer-link" href="#">FAQ</a>
+            <a class="footer-link" href="#">Contact Us</a>
+            <a class="footer-link" href="#">About Us</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 AuraMed Pharmacy. All Rights Reserved.</p>
+    </footer>
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCartModal()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total" id="cart-total">Total: $0.00</div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProductModal()">&times;</span>
+            <div id="product-details"></div>
+        </div>
+    </div>
+    <button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    <script>
         const productsData = [
             { id: 1, title: 'Paracetamol Tablets', description: 'Pain relief and fever reducer.', price: 5.99, img: 'https://source.unsplash.com/random/800x600/?medicine,paracetamol', category: 'Pain Relief', stock: 150, expiry: 'Dec 2026', manufacturer: 'Generic Pharma', dosage: '500mg', packSize: '10 tablets', reviews: ['Effective!', 'Quick relief'], rating: 4.5 },
             { id: 2, title: 'Vitamin C Supplements', description: 'Boost immunity with daily vitamins.', price: 12.49, img: 'https://source.unsplash.com/random/800x600/?vitamin,c', category: 'Vitamins', stock: 200, expiry: 'Jun 2027', manufacturer: 'Health Boost', dosage: '1000mg', packSize: '60 capsules', reviews: ['Great for health!', 'Tastes good'], rating: 4.7 },
             { id: 3, title: 'Blood Pressure Monitor', description: 'Accurate home monitoring device.', price: 45.99, img: 'https://source.unsplash.com/random/800x600/?bp,monitor', category: 'Devices', stock: 50, expiry: 'N/A', manufacturer: 'MedTech', dosage: 'N/A', packSize: '1 unit', reviews: ['Easy to use', 'Accurate readings'], rating: 4.8 },
-            // Add 97 more products for 100 total
-            { id: 100, title: 'Herbal Tea Blend', description: 'Natural relaxation tea.', price: 8.99, img: 'https://source.unsplash.com/random/800x600/?herbal,tea', category: 'Wellness', stock: 300, expiry: 'Mar 2026', manufacturer: 'Nature Herb', dosage: '1 bag per cup', packSize: '20 bags', reviews: ['Soothing', 'Great flavor'], rating: 4.6 }
+            { id: 4, title: 'Herbal Tea Blend', description: 'Natural relaxation tea.', price: 8.99, img: 'https://source.unsplash.com/random/800x600/?herbal,tea', category: 'Wellness', stock: 300, expiry: 'Mar 2026', manufacturer: 'Nature Herb', dosage: '1 bag per cup', packSize: '20 bags', reviews: ['Soothing', 'Great flavor'], rating: 4.6 }
         ];
 
-        const categories = ['Pain Relief', 'Vitamins', 'Devices', 'Skin Care', 'Baby Care', 'Nutrition', 'Wellness', 'OTC Medicines', 'Prescription', 'First Aid', 'Supplements', 'Diagnostics', 'Personal Care', 'Health Foods', 'Ayurvedic', 'Homeopathy', 'Fitness', 'Elder Care', 'Pet Care', 'Beauty'];
-
+        const categories = ['Pain Relief', 'Vitamins', 'Devices', 'Wellness'];
         const testimonialsData = [
             { quote: 'Fast delivery and genuine products!', author: 'John Doe' },
-            // Add 99 more for 100 total
             { quote: 'Excellent service always.', author: 'Jane Smith' }
         ];
-
         const blogPosts = [
             { title: 'Top Health Tips for Winter', excerpt: 'Stay healthy this season.', date: 'Oct 2025', img: 'https://source.unsplash.com/random/350x200/?health,winter' },
-            // Add 99 more for 100 total
             { title: 'Benefits of Daily Vitamins', excerpt: 'Boost your immunity.', date: 'Sep 2025', img: 'https://source.unsplash.com/random/350x200/?vitamins' }
         ];
-
         const teamMembers = [
             { name: 'Dr. Alex Green', role: 'Chief Pharmacist', img: 'https://source.unsplash.com/random/150x150/?person,doctor1', bio: 'Expert in pharmaceuticals.' },
-            // Add 49 more for 50 total
-            { name: 'Sarah Blue', role: 'Customer Support', img: 'https://source.unsplash.com/random/150x150/?person,support50', bio: 'Dedicated to service.' }
+            { name: 'Sarah Blue', role: 'Customer Support', img: 'https://source.unsplash.com/random/150x150/?person,support', bio: 'Dedicated to service.' }
         ];
-
         const faqData = [
             { question: 'How to order prescription medicines?', answer: 'Upload prescription during checkout.' },
-            // Add 49 more for 50 total
             { question: 'Return policy?', answer: 'Within 7 days for unopened items.' }
         ];
 
-        const App = () => {
-            const [cart, setCart] = useState([]);
-            const [showCart, setShowCart] = useState(false);
-            const [selectedProduct, setSelectedProduct] = useState(null);
-            const [searchTerm, setSearchTerm] = useState('');
-            const [filterCategory, setFilterCategory] = useState('');
-            const [filterPrice, setFilterPrice] = useState('');
-            const [currentPage, setCurrentPage] = useState(1);
-            const productsPerPage = 12;
-            const [faqActive, setFaqActive] = useState([]);
+        let cart = [];
+        let currentPage = 1;
+        const productsPerPage = 4;
 
-            useEffect(() => {
-                gsap.from('.product-card', { duration: 0.8, y: 50, opacity: 0, stagger: 0.1, ease: 'power2.out' });
-                const handleScroll = () => {
-                    const scrollTopBtn = document.querySelector('.scroll-top');
-                    if (window.scrollY > 500) {
-                        scrollTopBtn.classList.add('visible');
-                    } else {
-                        scrollTopBtn.classList.remove('visible');
-                    }
+        function init() {
+            renderCategories();
+            renderProducts();
+            renderTestimonials();
+            renderBlogPosts();
+            renderTeam();
+            renderFaq();
+            renderPromotions();
+            renderPartners();
+            initAnimations();
+            initScrollTop();
+            document.getElementById('search-input').addEventListener('input', filterProducts);
+        }
+
+        function renderCategories() {
+            const grid = document.getElementById('categories-grid');
+            grid.innerHTML = '';
+            categories.forEach(cat => {
+                const div = document.createElement('div');
+                div.className = 'category-card';
+                div.innerHTML = `
+                    <div class="category-icon">🩺</div>
+                    <h3>${cat}</h3>
+                `;
+                div.onclick = () => {
+                    document.getElementById('category-filter').value = cat;
+                    filterProducts();
                 };
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
+                grid.appendChild(div);
+            });
 
-            const addToCart = (product) => {
-                setCart([...cart, product]);
-            };
+            const categoryFilter = document.getElementById('category-filter');
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat;
+                categoryFilter.appendChild(option);
+            });
+        }
 
-            const removeFromCart = (id) => {
-                setCart(cart.filter(item => item.id !== id));
-            };
-
-            const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
-
-            const filteredProducts = productsData.filter(product => 
-                product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-                (filterCategory ? product.category === filterCategory : true) &&
-                (filterPrice ? (filterPrice === 'low' ? product.price < 20 : product.price >= 20) : true)
+        function renderProducts() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+            const priceFilter = document.getElementById('price-filter').value;
+            const filteredProducts = productsData.filter(product =>
+                product.title.toLowerCase().includes(searchTerm) &&
+                (categoryFilter ? product.category === categoryFilter : true) &&
+                (priceFilter ? (priceFilter === 'low' ? product.price < 20 : product.price >= 20) : true)
             );
 
-            const indexOfLastProduct = currentPage * productsPerPage;
-            const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-            const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+            const start = (currentPage - 1) * productsPerPage;
+            const end = start + productsPerPage;
+            const currentProducts = filteredProducts.slice(start, end);
 
-            const paginate = (pageNumber) => setCurrentPage(pageNumber);
+            currentProducts.forEach(product => {
+                const div = document.createElement('div');
+                div.className = 'product-card';
+                div.innerHTML = `
+                    <img src="${product.img}" alt="${product.title}" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <span class="product-price">$${product.price.toFixed(2)}</span>
+                        <p class="product-details">Stock: ${product.stock} | Expiry: ${product.expiry}</p>
+                        <p class="product-details">Manufacturer: ${product.manufacturer} | Dosage: ${product.dosage}</p>
+                        <button class="add-to-cart" onclick="addToCart(${product.id})">Add to Cart</button>
+                    </div>
+                `;
+                div.onclick = () => openProductModal(product);
+                grid.appendChild(div);
+            });
 
-            const toggleFaq = (index) => {
-                const newActive = [...faqActive];
-                newActive[index] = !newActive[index];
-                setFaqActive(newActive);
-            };
+            renderPagination(filteredProducts.length);
+        }
 
-            return (
-                <div>
-                    <nav className="navbar">
-                        <div className="logo">AuraMed Pharmacy</div>
-                        <div className="nav-links">
-                            <a href="#hero">Home</a>
-                            <a href="#categories">Categories</a>
-                            <a href="#products">Products</a>
-                            <a href="#blog">Blog</a>
-                            <a href="#contact">Contact</a>
-                        </div>
-                        <div className="search-container">
-                            <input 
-                                type="text" 
-                                className="search-input" 
-                                placeholder="Search medicines..." 
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                            />
-                        </div>
-                        <div className="cart-icon" onClick={() => setShowCart(true)}>
-                            🛒 <span className="cart-count">{cart.length}</span>
-                        </div>
-                    </nav>
-                    <section id="hero">
-                        <h1>Your Trusted Online Medical Store</h1>
-                        <p>Fast delivery, genuine products, and expert care for all your health needs.</p>
-                        <button onClick={() => document.getElementById('products').scrollIntoView({behavior: 'smooth'})}>Shop Now</button>
-                    </section>
-                    <section id="categories">
-                        <h2>Browse Categories</h2>
-                        <div className="categories-grid">
-                            {categories.map(cat => (
-                                <div key={cat} className="category-card" onClick={() => setFilterCategory(cat)}>
-                                    <div className="category-icon">🩺</div>
-                                    <h3>{cat}</h3>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="products">
-                        <h2>Our Products</h2>
-                        <div className="filters">
-                            <select className="filter-select" value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)}>
-                                <option value="">All Categories</option>
-                                {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-                            </select>
-                            <select className="filter-select" value={filterPrice} onChange={(e) => setFilterPrice(e.target.value)}>
-                                <option value="">All Prices</option>
-                                <option value="low">Under $20</option>
-                                <option value="high">$20 and Above</option>
-                            </select>
-                        </div>
-                        <div className="products-grid">
-                            {currentProducts.map(product => (
-                                <div key={product.id} className="product-card" onClick={() => setSelectedProduct(product)}>
-                                    <img src={product.img} alt={product.title} className="product-img" />
-                                    <div className="product-info">
-                                        <h3 className="product-title">{product.title}</h3>
-                                        <p className="product-desc">{product.description}</p>
-                                        <span className="product-price">${product.price.toFixed(2)}</span>
-                                        <p className="product-details">Stock: {product.stock} | Expiry: {product.expiry}</p>
-                                        <p className="product-details">Manufacturer: {product.manufacturer} | Dosage: {product.dosage}</p>
-                                        <button className="add-to-cart" onClick={(e) => { e.stopPropagation(); addToCart(product); }}>Add to Cart</button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="pagination">
-                            {Array.from({length: Math.ceil(filteredProducts.length / productsPerPage)}).map((_, i) => (
-                                <button key={i} className={"page-btn " + (currentPage == i + 1 ? 'active' : '')} onClick={() => paginate(i + 1)}>{i + 1}</button>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="testimonials">
-                        <h2>What Our Customers Say</h2>
-                        <div className="testimonials-grid">
-                            {testimonialsData.map((test, index) => (
-                                <div key={index} className="testimonial">
-                                    <p>"{test.quote}"</p>
-                                    <span className="testimonial-author">- {test.author}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="blog">
-                        <h2>Health Blog</h2>
-                        <div className="blog-posts">
-                            {blogPosts.map((post, index) => (
-                                <div key={index} className="blog-post">
-                                    <img src={post.img} alt={post.title} className="blog-img" />
-                                    <div className="blog-info">
-                                        <h3 className="blog-title">{post.title}</h3>
-                                        <p className="blog-excerpt">{post.excerpt}</p>
-                                        <span className="blog-date">{post.date}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="team">
-                        <h2>Our Team</h2>
-                        <div className="team-grid">
-                            {teamMembers.map((member, index) => (
-                                <div key={index} className="team-member">
-                                    <img src={member.img} alt={member.name} className="team-img" />
-                                    <h3 className="team-name">{member.name}</h3>
-                                    <p className="team-role">{member.role}</p>
-                                    <span>{member.bio}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="faq">
-                        <h2>Frequently Asked Questions</h2>
-                        <div className="faq-list">
-                            {faqData.map((faq, index) => (
-                                <div key={index} className={`faq-item ${faqActive[index] ? 'active' : ''}`} onClick={() => toggleFaq(index)}>
-                                    <div className="faq-question">{faq.question}</div>
-                                    <div className="faq-answer">{faq.answer}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="promotions">
-                        <h2>Current Promotions</h2>
-                        <div className="promotions-grid">
-                            {[...Array(6)].map((_, index) => (
-                                <div key={index} className="promo-card">
-                                    <h3 className="promo-title">Promo {index + 1}</h3>
-                                    <p className="promo-desc">Get 20% off on selected items.</p>
-                                    <button className="promo-btn">Shop Now</button>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="partners">
-                        <h2>Our Partners</h2>
-                        <div className="partners-grid">
-                            {[...Array(14)].map((_, index) => (
-                                <img key={index} src={`https://source.unsplash.com/random/150x80/?partner,${index}`} alt={`Partner ${index + 1}`} className="partner-logo" />
-                            ))}
-                        </div>
-                    </section>
-                    <section id="stats">
-                        <h2>Our Achievements</h2>
-                        <div className="stats-grid">
-                            <div className="stat">
-                                <div className="stat-number">10M+</div>
-                                <div className="stat-label">Products Sold</div>
-                            </div>
-                            <div className="stat">
-                                <div className="stat-number">5M+</div>
-                                <div className="stat-label">Happy Customers</div>
-                            </div>
-                            <div className="stat">
-                                <div className="stat-number">100+</div>
-                                <div className="stat-label">Partners</div>
-                            </div>
-                            <div className="stat">
-                                <div className="stat-number">4.9/5</div>
-                                <div className="stat-label">Average Rating</div>
-                            </div>
-                            // Add more stats for length
-                        </div>
-                    </section>
-                    <section id="newsletter">
-                        <h2>Subscribe to Newsletter</h2>
-                        <form className="newsletter-form">
-                            <input className="newsletter-input" placeholder="Your Email" />
-                            <button className="newsletter-btn">Subscribe</button>
-                        </form>
-                    </section>
-                    <section id="video">
-                        <h2>Watch Our Story</h2>
-                        <div className="video-wrapper">
-                            <video controls>
-                                <source src="https://example.com/video.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </section>
-                    <section id="pricing">
-                        <h2>Membership Plans</h2>
-                        <div className="pricing-plans">
-                            {[...Array(5)].map((_, index) => (
-                                <div key={index} className="plan">
-                                    <h3 className="plan-title">Plan {index + 1}</h3>
-                                    <div className="plan-price">$9.99/month</div>
-                                    <ul className="plan-features">
-                                        <li>Feature 1</li>
-                                        <li>Feature 2</li>
-                                        <li>Feature 3</li>
-                                    </ul>
-                                    <button className="plan-btn">Subscribe</button>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                    <section id="contact">
-                        <h2>Get in Touch</h2>
-                        <form className="contact-form">
-                            <input className="contact-input" placeholder="Your Name" />
-                            <input className="contact-input" placeholder="Your Email" />
-                            <textarea className="contact-input" placeholder="Your Message" rows="6"></textarea>
-                            <button className="contact-btn">Send Message</button>
-                        </form>
-                    </section>
-                    <footer>
-                        <div className="footer-links">
-                            <a className="footer-link" href="#">Privacy Policy</a>
-                            <a className="footer-link" href="#">Terms of Service</a>
-                            <a className="footer-link" href="#">FAQ</a>
-                            <a className="footer-link" href="#">Contact Us</a>
-                            <a className="footer-link" href="#">About Us</a>
-                        </div>
-                        <p className="footer-copy">&copy; 2025 AuraMed Pharmacy. All Rights Reserved.</p>
-                    </footer>
-                    {showCart && (
-                        <div className="modal open" onClick={() => setShowCart(false)}>
-                            <div className="modal-content" onClick={e => e.stopPropagation()}>
-                                <span className="close-btn" onClick={() => setShowCart(false)}>×</span>
-                                <h2>Your Cart</h2>
-                                {cart.map(item => (
-                                    <div key={item.id} className="cart-item">
-                                        <img src={item.img} alt={item.title} className="cart-item-img" />
-                                        <div className="cart-item-info">
-                                            <h3 className="cart-item-title">{item.title}</h3>
-                                            <span className="cart-item-price">${item.price.toFixed(2)}</span>
-                                        </div>
-                                        <button className="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
-                                    </div>
-                                ))}
-                                <div className="cart-total">Total: ${totalPrice.toFixed(2)}</div>
-                                <button className="checkout-btn">Checkout</button>
-                            </div>
-                        </div>
-                    )}
-                    {selectedProduct && (
-                        <div className="modal open" onClick={() => setSelectedProduct(null)}>
-                            <div className="modal-content" onClick={e => e.stopPropagation()}>
-                                <span className="close-btn" onClick={() => setSelectedProduct(null)}>×</span>
-                                <img src={selectedProduct.img} alt={selectedProduct.title} className="product-detail-img" />
-                                <h2 className="product-detail-title">{selectedProduct.title}</h2>
-                                <p className="product-detail-desc">{selectedProduct.description}</p>
-                                <p className="product-detail-info">Stock: {selectedProduct.stock} | Expiry: {selectedProduct.expiry}</p>
-                                <p className="product-detail-info">Manufacturer: {selectedProduct.manufacturer} | Dosage: {selectedProduct.dosage}</p>
-                                <p className="product-detail-info">Pack Size: {selectedProduct.packSize} | Rating: {selectedProduct.rating}</p>
-                                <span className="product-detail-price">${selectedProduct.price.toFixed(2)}</span>
-                                <button className="add-to-cart" onClick={() => addToCart(selectedProduct)}>Add to Cart</button>
-                            </div>
-                        </div>
-                    )}
-                    <button className="scroll-top" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>↑</button>
-                </div>
-            );
-        };
+        function renderPagination(totalProducts) {
+            const pages = Math.ceil(totalProducts / productsPerPage);
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            for (let i = 1; i <= pages; i++) {
+                const button = document.createElement('button');
+                button.className = 'page-btn' + (i === currentPage ? ' active' : '');
+                button.textContent = i;
+                button.onclick = () => {
+                    currentPage = i;
+                    renderProducts();
+                };
+                pagination.appendChild(button);
+            }
+        }
 
-        ReactDOM.render(<App />, document.getElementById('root'));
-]]>
+        function filterProducts() {
+            currentPage = 1;
+            renderProducts();
+        }
+
+        function addToCart(id) {
+            const product = productsData.find(p => p.id === id);
+            cart.push(product);
+            updateCart();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        function updateCart() {
+            document.getElementById('cart-count').textContent = cart.length;
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="${item.img}" alt="${item.title}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h3 class="cart-item-title">${item.title}</h3>
+                        <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                    </div>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+                `;
+                cartItems.appendChild(div);
+            });
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        function openCartModal() {
+            document.getElementById('cart-modal').className = 'modal open';
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').className = 'modal';
+        }
+
+        function openProductModal(product) {
+            const modal = document.getElementById('product-modal');
+            const details = document.getElementById('product-details');
+            details.innerHTML = `
+                <img src="${product.img}" alt="${product.title}" class="product-detail-img">
+                <h2 class="product-detail-title">${product.title}</h2>
+                <p class="product-detail-desc">${product.description}</p>
+                <p class="product-detail-info">Stock: ${product.stock} | Expiry: ${product.expiry}</p>
+                <p class="product-detail-info">Manufacturer: ${product.manufacturer} | Dosage: ${product.dosage}</p>
+                <p class="product-detail-info">Pack Size: ${product.packSize} | Rating: ${product.rating}</p>
+                <span class="product-detail-price">$${product.price.toFixed(2)}</span>
+                <button class="add-to-cart" onclick="addToCart(${product.id})">Add to Cart</button>
+            `;
+            modal.className = 'modal open';
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').className = 'modal';
+        }
+
+        function renderTestimonials() {
+            const grid = document.getElementById('testimonials-grid');
+            grid.innerHTML = '';
+            testimonialsData.forEach(test => {
+                const div = document.createElement('div');
+                div.className = 'testimonial';
+                div.innerHTML = `
+                    <p>"${test.quote}"</p>
+                    <span class="testimonial-author">- ${test.author}</span>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        function renderBlogPosts() {
+            const posts = document.getElementById('blog-posts');
+            posts.innerHTML = '';
+            blogPosts.forEach(post => {
+                const div = document.createElement('div');
+                div.className = 'blog-post';
+                div.innerHTML = `
+                    <img src="${post.img}" alt="${post.title}" class="blog-img">
+                    <div class="blog-info">
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <span class="blog-date">${post.date}</span>
+                    </div>
+                `;
+                posts.appendChild(div);
+            });
+        }
+
+        function renderTeam() {
+            const grid = document.getElementById('team-grid');
+            grid.innerHTML = '';
+            teamMembers.forEach(member => {
+                const div = document.createElement('div');
+                div.className = 'team-member';
+                div.innerHTML = `
+                    <img src="${member.img}" alt="${member.name}" class="team-img">
+                    <h3 class="team-name">${member.name}</h3>
+                    <p class="team-role">${member.role}</p>
+                    <span>${member.bio}</span>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        function renderFaq() {
+            const list = document.getElementById('faq-list');
+            list.innerHTML = '';
+            faqData.forEach((faq, index) => {
+                const div = document.createElement('div');
+                div.className = 'faq-item';
+                div.innerHTML = `
+                    <div class="faq-question">${faq.question}</div>
+                    <div class="faq-answer">${faq.answer}</div>
+                `;
+                div.onclick = () => {
+                    div.className = div.className.includes('active') ? 'faq-item' : 'faq-item active';
+                };
+                list.appendChild(div);
+            });
+        }
+
+        function renderPromotions() {
+            const grid = document.getElementById('promotions-grid');
+            grid.innerHTML = '';
+            for (let i = 1; i <= 6; i++) {
+                const div = document.createElement('div');
+                div.className = 'promo-card';
+                div.innerHTML = `
+                    <h3 class="promo-title">Promo ${i}</h3>
+                    <p class="promo-desc">Get 20% off on selected items.</p>
+                    <button class="promo-btn">Shop Now</button>
+                `;
+                grid.appendChild(div);
+            }
+        }
+
+        function renderPartners() {
+            const grid = document.getElementById('partners-grid');
+            grid.innerHTML = '';
+            for (let i = 0; i < 14; i++) {
+                const img = document.createElement('img');
+                img.src = `https://source.unsplash.com/random/150x80/?partner,${i}`;
+                img.alt = `Partner ${i + 1}`;
+                img.className = 'partner-logo';
+                grid.appendChild(img);
+            }
+        }
+
+        function initAnimations() {
+            gsap.from('.product-card', { duration: 0.8, y: 50, opacity: 0, stagger: 0.1, ease: 'power2.out' });
+        }
+
+        function initScrollTop() {
+            window.addEventListener('scroll', () => {
+                const scrollTopBtn = document.getElementById('scroll-top');
+                if (window.scrollY > 500) {
+                    scrollTopBtn.className = 'scroll-top visible';
+                } else {
+                    scrollTopBtn.className = 'scroll-top';
+                }
+            });
+        }
+
+        window.onload = init;
     </script>
 </body>
 </html>
