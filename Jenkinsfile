@@ -7,7 +7,7 @@ node
 
 
    // /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven-3.8/bin
-   def mavenHome=tool name: "maven-3.8"
+   def mavenHome=tool name: "Maven-3.8"
     try
     {
 
