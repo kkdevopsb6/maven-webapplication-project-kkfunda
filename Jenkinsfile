@@ -1,66 +1,47 @@
-node
-{
+node {
+    echo "git branch name: ${env.BRANCH_NAME}"
+    echo "build number is: ${env.BUILD_NUMBER}"
+    echo "node name is: ${env.NODE_NAME}"
 
-   echo "git branch name: ${env.BRANCH_NAME}"
-   echo "build number is: ${env.BUILD_NUMBER}"
-   echo "node name is: ${env.NODE_NAME}"
+    def mavenHome = tool name: "Maven-3.8"
 
+    try {
+        stage('Git Checkout') {
+            notifyBuild('STARTED')
+            git branch: 'main', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
+        }
 
-   // /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven-3.8/bin
-   def mavenHome =tool name: "Maven-3.8"
-    try
-    {
+        stage('Compile') {
+            sh "${mavenHome}/bin/mvn clean compile"
+        }
 
-  stage('git checkout')
-  {
-    notifyBuild('STARTED')
-    git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
+        stage('Build') {
+            sh "${mavenHome}/bin/mvn clean package"
+        }
 
-    stage('COMPILE')
-  {
-    sh "${mavenHome}/bin/mvn clean compile"
-  }
+        stage('SonarQube Report') {
+            sh "${mavenHome}/bin/mvn sonar:sonar"
+        }
 
-  stage('Build')
-  {
-    sh "${mavenHome}/bin/mvn clean package"
-  }
+        stage('Upload Artifact') {
+            sh "${mavenHome}/bin/mvn clean deploy"
+        }
 
-    stage('SQ Report')
-  {
-    sh "${mavenHome}/bin/mvn sonar:sonar"
-  }
+        stage('Deploy to Tomcat') {
+            sh """
+            curl -u kk:password \
+            --upload-file target/maven-web-application.war \
+            "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"
+            """
+        }
 
-      stage('Upload Artifact')
-  {
-
-    sh "${mavenHome}/bin/mvn clean deploy"
-  }
-
-    stage('Deploy to Tomcat') 
-    {
-      
-      sh """
-
-      curl -u kk:password \
---upload-file /var/lib/jenkins/workspace/jio-scripted-way-PL/target/maven-web-application.war \
-"http://localhost:8082//manager/text/deploy?path=/maven-web-application&update=true"
-          
-        """
+    } catch (err) {
+        currentBuild.result = 'FAILURE'
+        echo "Build failed: ${err}"
+    } finally {
+        notifyBuild(currentBuild.result ?: 'SUCCESS')
     }
-
-    }  //try ending
-
-    catch (e) {
-   
-       currentBuild.result = "FAILED"
-
-  } finally {
-    // Success or failure, always send notifications
-    notifyBuild(currentBuild.result)
-  }
-  
-} // node ending
+}
 
 
 def notifyBuild(String buildStatus = 'STARTED') {
