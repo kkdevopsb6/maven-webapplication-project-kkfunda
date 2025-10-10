@@ -8,7 +8,7 @@ node {
     try {
         stage('Git Checkout') {
             notifyBuild('STARTED')
-            git branch: 'main', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
+            git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
         }
 
         stage('Compile') {
