@@ -1,15 +1,3 @@
-
-
-properties([
-    pipelineTriggers([
-        cron('*/1 * * * *') // Poll every 5 minutes (H = hash spread)
-    ])
-])
-
-stage('poll SCM'){
-
-}
-
 node
 { 
 
