@@ -2,7 +2,7 @@
 
 properties([
     pipelineTriggers([
-        pollSCM('*/1 * * * *') // Poll every 5 minutes (H = hash spread)
+        cron('*/1 * * * *') // Poll every 5 minutes (H = hash spread)
     ])
 ])
 
