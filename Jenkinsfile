@@ -61,7 +61,7 @@ sh """
 "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"
           
        """ 
-       
+    }    
       
     }  //try ending
 
