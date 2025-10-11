@@ -6,6 +6,10 @@ properties([
     ])
 ])
 
+stage('poll SCm'){
+
+}
+
 node
 { 
 
