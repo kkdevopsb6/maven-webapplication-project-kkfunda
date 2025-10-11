@@ -1,11 +1,4 @@
 
-properties([ 
-   pipelineTriggers([
-      cron('*/1 * * * *')
-      ])
-   ])
-
-
 node
 { 
 
