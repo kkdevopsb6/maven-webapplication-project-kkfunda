@@ -28,19 +28,27 @@ node
     notifyBuild('STARTED')
     git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
   } 
-        stage('Poll SCM'){
-
-        }
-
 
     stage('COMPILE')
   {
     sh "${mavenHome}/bin/mvn clean compile"
   }    
+    stage('Test')
+        {
+            sh "${mavenHome}/bin/mvn clean test"
+        }
+
+  stage('Jacoco')
+  {
+      jacoco buildOverBuild: true, changeBuildStatus: true, runAlways: true, skipCopyOfSrcFiles: true
+  }
+    
   stage('Build')
   {
     sh "${mavenHome}/bin/mvn clean package"
   }
+
+  
 
     stage('SQ Report')
   {
