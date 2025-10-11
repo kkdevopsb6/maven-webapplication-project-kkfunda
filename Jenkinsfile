@@ -1,7 +1,7 @@
 
 properties([ 
    pipelineTriggers([
-      cron('0/1 * * * *')
+      cron('*/1 * * * *')
       ])
    ])
 
