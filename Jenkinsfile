@@ -42,7 +42,7 @@ node
     stage('Deploy to Tomcat') 
     {
        
-deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'e633e927-d761-4c1f-aef1-baf4b4bc22a2', path: '', url: 'http://localhost:8082/')], contextPath: null, war: '*/maven-web-application'
+    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'e633e927-d761-4c1f-aef1-baf4b4bc22a2', path: '', url: 'http://localhost:8082/')], contextPath: null, war: '*/maven-web-application'
     
     }
 
