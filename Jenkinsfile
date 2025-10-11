@@ -60,9 +60,8 @@ sh """
 --upload-file /var/lib/jenkins/workspace/Maven-Scripted-Pipelines/target/maven-web-application.war \
 "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"
           
-    }    """ 
+       """ 
        
-    
       
     }  //try ending
 
