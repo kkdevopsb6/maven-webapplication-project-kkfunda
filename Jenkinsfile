@@ -5,7 +5,6 @@ node
    echo "build number is: ${env.BUILD_NUMBER}"
    echo "node name is: ${env.NODE_NAME}"
 
-
    // /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven-3.8/bin
    def mavenHome =tool name: "Maven-3.8"
     try
