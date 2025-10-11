@@ -2,7 +2,7 @@
 
 properties([
     pipelineTriggers([
-        pollSCM('H/1 * * * *') // Poll every 5 minutes (H = hash spread)
+        pollSCM('*/1 * * * *') // Poll every 5 minutes (H = hash spread)
     ])
 ])
 
@@ -33,15 +33,11 @@ node
   {
     sh "${mavenHome}/bin/mvn clean compile"
   }    
-    stage('Test')
+    stage('Test and Jacoco')
         {
             sh "${mavenHome}/bin/mvn clean test"
+            jacoco buildOverBuild: true, changeBuildStatus: true, runAlways: true, skipCopyOfSrcFiles: true
         }
-
-  stage('Jacoco')
-  {
-      jacoco buildOverBuild: true, changeBuildStatus: true, runAlways: true, skipCopyOfSrcFiles: true
-  }
     
   stage('Build')
   {
