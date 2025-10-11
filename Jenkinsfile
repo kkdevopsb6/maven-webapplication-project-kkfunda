@@ -6,9 +6,6 @@ properties([
     ])
 ])
 
-stage('poll SCm'){
-
-}
 
 node
 { 
@@ -28,6 +25,9 @@ node
     notifyBuild('STARTED')
     git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
   } 
+        stage('Poll SCM'){
+
+        }
 
 
     stage('COMPILE')
