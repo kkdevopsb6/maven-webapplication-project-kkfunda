@@ -44,8 +44,8 @@ node
        
 sh """
 
-      curl -u kk:password \
---upload-file /var/lib/jenkins/workspace/jio-scripted-way-PL/target/maven-web-application.war \
+      curl -u rahul:admin123 \
+--upload-file /var/lib/jenkins/workspace/Maven-Scripted-Pipelines/target/maven-web-application.war \
 "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"
           
         """ 
