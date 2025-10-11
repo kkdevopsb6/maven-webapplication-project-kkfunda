@@ -25,11 +25,6 @@ node
     git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
   } 
 
-       stage('Poll scm')
-       {
-
-          
-       }
 
     stage('COMPILE')
   {
