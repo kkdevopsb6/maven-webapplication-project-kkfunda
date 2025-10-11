@@ -40,9 +40,16 @@ node
   }
 
     stage('Deploy to Tomcat') 
-    {  
-     --upload-file /var/lib/jenkins/workspace/jio-scripted-way-PL/target/maven-web-application.war \
-     "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"  
+    { 
+       
+sh """
+
+      curl -u kk:password \
+--upload-file /var/lib/jenkins/workspace/jio-scripted-way-PL/target/maven-web-application.war \
+"http://3.109.2.100:9090/manager/text/deploy?path=/maven-web-application&update=true"
+          
+        """ 
+       
     }
 
     }  //try ending
