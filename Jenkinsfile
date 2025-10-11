@@ -1,6 +1,13 @@
 
+
+properties([
+    pipelineTriggers([
+        pollSCM('H/1 * * * *') // Poll every 5 minutes (H = hash spread)
+    ])
+])
+
 node
-{
+{ 
 
    echo "git branch name: ${env.BRANCH_NAME}"
    echo "build number is: ${env.BUILD_NUMBER}"
@@ -18,11 +25,16 @@ node
     git branch: 'master', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
   } 
 
+       stage('Poll scm')
+       {
+
+          
+       }
+
     stage('COMPILE')
   {
     sh "${mavenHome}/bin/mvn clean compile"
-  }
-
+  }    
   stage('Build')
   {
     sh "${mavenHome}/bin/mvn clean package"
@@ -48,10 +60,10 @@ sh """
 --upload-file /var/lib/jenkins/workspace/Maven-Scripted-Pipelines/target/maven-web-application.war \
 "http://localhost:8082/manager/text/deploy?path=/maven-web-application&update=true"
           
-        """ 
+    }    """ 
        
-    }
-
+    
+      
     }  //try ending
 
     catch (e) {
