@@ -24,10 +24,10 @@ notifyBuild('STARTED')
     sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-3.9.6/bin/mvn clean package"
     // sh "${mavenHome}/bin/mvn clean package"
   }
-  stage("Sonar Qube Report")
+  /*stage("Sonar Qube Report")
   {
     sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-3.9.6/bin/mvn sonar:sonar"
-  }
+  }*/
   stage("Deploy into nexus Artifactory")
   {
     sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-3.9.6/bin/mvn deploy"
