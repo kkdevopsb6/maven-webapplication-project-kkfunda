@@ -15,7 +15,7 @@
     }
     header {
         background: linear-gradient(90deg, #007bff, #00c6ff);
-        color: white;
+        color: orange;
         padding: 20px;
         text-align: center;
     }
@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀 💯, Lerning Devops with Hemanth ,Jenkins CI/CD made Easy</h1>
+    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀 💯, Lerning Devops with Hemanth ,Jenkins CI/CD made Easy,Docker,K8s</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
