@@ -10,6 +10,7 @@ node
     try
     {
 
+       
   stage('git checkout')
   {
     notifyBuild('STARTED')
