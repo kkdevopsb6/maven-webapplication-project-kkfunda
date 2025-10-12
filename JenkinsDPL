@@ -15,7 +15,7 @@ pipeline {
                 git branch: 'Dev', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
             }
         }
-        
+
         stage('Maven Test & Jacoco') {
             steps {
             sh "mvn test" 
