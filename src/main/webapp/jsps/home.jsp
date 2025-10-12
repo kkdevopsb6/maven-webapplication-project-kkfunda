@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀 💯, Lerning Devops with Hemanth ,Jenkins CI/CD made Easy,Docker,K8s,AWS</h1>
+    <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀 💯, Lerning Devops with Hemanth ,Jenkins CI/CD made Easy,Docker,K8s,AWS,Automation</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
