@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA DEVSECOPS  NEW BATCH SRE Portal 12345678 MORE CLASS 10:10 to 11:11 🚀</h1>
+    <h1>🚀 Welcome to KK FUNDA DEVSECOPS  🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
