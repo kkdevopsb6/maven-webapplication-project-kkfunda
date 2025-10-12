@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+    
+    tools {           
+        maven "Maven-3.8"      
+        }
+        
+        triggers {
+            pollSCM('*/1 * * * *')
+        }
+    
+    stages{
+        stage('Github') {
+            steps{
+                git branch: 'Dev', url: 'https://github.com/Kuchi-Rahul/maven-webapplication-project-kkfunda.git'
+            }
+        }
+        
+        stage('Maven Test & Jacoco') {
+            steps {
+            sh "mvn test" 
+            jacoco buildOverBuild: true, changeBuildStatus: true, runAlways: true, skipCopyOfSrcFiles: true
+            }
+        }
+        
+        stage('Sonarqube') {
+            steps{
+                sh "mvn sonar:sonar"
+            }
+        }
+        
+        stage('Nexus') {
+            steps{
+                sh "mvn deploy"
+            }
+        }
+        
+        stage('Tomcat Deployment'){
+            steps{
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'e633e927-d761-4c1f-aef1-baf4b4bc22a2', path: '', url: 'http://localhost:8082/')], contextPath: null, war: '**/maven-web-application.war'
+            }
+        }
+       
+    }
+    
+    
+}
