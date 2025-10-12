@@ -33,7 +33,7 @@
     footer {
         margin-top: 30px;
         background: #222;
-        color: white;
+        color: orange;
         padding: 15px;
         text-align: center;
     }
