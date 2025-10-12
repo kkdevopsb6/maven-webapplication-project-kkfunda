@@ -21,6 +21,7 @@ node
   {
     sh "${mavenHome}/bin/mvn clean compile"
   }    
+       
     stage('Test and Jacoco')
         {
             sh "${mavenHome}/bin/mvn clean test"
