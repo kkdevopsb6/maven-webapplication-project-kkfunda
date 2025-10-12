@@ -15,8 +15,8 @@ pipeline {
 
         stage('Maven Test & Jacoco') {
             steps {
-            sh "mvn test" 
-            jacoco buildOverBuild: true, changeBuildStatus: true, runAlways: true, skipCopyOfSrcFiles: true
+            sh "mvn test"
+            jacoco buildOverBuild: true, changeBuildStatus: true, deltaBranchCoverage: '1', deltaClassCoverage: '1', deltaComplexityCoverage: '1', deltaInstructionCoverage: '1', deltaLineCoverage: '1', deltaMethodCoverage: '1', maximumBranchCoverage: '1', maximumClassCoverage: '1', maximumComplexityCoverage: '1', maximumInstructionCoverage: '1', maximumLineCoverage: '1', maximumMethodCoverage: '1', minimumBranchCoverage: '1', minimumClassCoverage: '1', minimumComplexityCoverage: '1', minimumInstructionCoverage: '1', minimumLineCoverage: '1', minimumMethodCoverage: '1', runAlways: true, skipCopyOfSrcFiles: true
             }
         }
         
@@ -39,6 +39,6 @@ pipeline {
         }
        
     }
-    
-    
+
 }
+
