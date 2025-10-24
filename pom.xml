@@ -21,7 +21,7 @@
 		<spring.version>5.3.34</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.93.164.199:9000</sonar.host.url>
+		<sonar.host.url>http://13.58.209.165:9000</sonar.host.url>
 		 <sonar.token> squ_2e0cb58e1360eafdd17f0128863b5c9a57d64537</sonar.token>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://54.163.44.120:8081/repository/maven-releases</url>
+	      <url>http://18.117.84.208:8081/repository/maven-releases</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://54.163.44.120:8081/repository/maven-snapshots/</url>
+	      <url>http://18.117.84.208:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
