@@ -54,7 +54,7 @@
 
     <!-- Server Info -->
     <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
+        <h3>🌐 Server Side Information ! ...............</h3>
         <hr>
         <%
             InetAddress inetAddress = InetAddress.getLocalHost();
