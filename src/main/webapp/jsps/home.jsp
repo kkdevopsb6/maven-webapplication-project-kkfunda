@@ -47,7 +47,7 @@
 
 <header>
     <h1>🚀 Welcome to Hemanth Varupula SRE Portal 🚀 💯, Lerning Devops with Hemanth ,Jenkins CI/CD made Easy,Docker,K8s,AWS,Automation</h1>
-    <h3 color="red">Training | Development | Consulting , Hare Krishna</h3>
+    <h3 color="red">Training | Development | Consulting , Hare Krishna , Jai Shri Ram</h3>
 </header>
 
 <div class="container">
