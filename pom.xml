@@ -97,14 +97,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://13.233.47.242:8081/repository/jio-release-repo/</url>
+	      <name>KK nwcs-rrr</name>
+	      <url>http://98.89.71.186:8081/repository/nwcs-rrr/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://13.233.47.242:8081/repository/jio-snapshot-repo/</url>
+	      <name>nwcs </name>
+	      <url>http://98.89.71.186:8081/repository/nwcs/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
