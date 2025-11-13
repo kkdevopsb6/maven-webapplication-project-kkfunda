@@ -47,7 +47,7 @@
 
 <header>
     <h1>🚀 vijjeswarapu vineel mahesh 🚀</h1>
-    <h3>Training | Development | Consulting</h3>
+    <h3>Training | Development | </h3>
 </header>
 
 <div class="container">
