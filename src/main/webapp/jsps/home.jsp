@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 vijjeswarapu vineel mahesh 🚀</h1>
+    <h1>🚀 mahesh 🚀</h1>
     <h3>Training | Development |mmmmmmmm</h3>
 </header>
 
