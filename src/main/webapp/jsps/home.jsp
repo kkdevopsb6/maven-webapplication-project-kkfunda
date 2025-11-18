@@ -46,8 +46,8 @@
 <body>
 
 <header>
-    <h1> Rajula Brahmananda Reddy</h1>
-    <h3>Training | Development | Consulting</h3>
+    <h1> Rajula Brahmananda Reddy [Mobis india]</h1>
+    <h3>Training | montraser  | Consulting</h3>
 </header>
 
 <div class="container">
