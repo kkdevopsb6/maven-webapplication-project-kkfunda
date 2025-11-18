@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://172.31.40.189:8081/repository/flipkart-release/</url>
+	      <name>RR RR  Releases Nexus Repository</name>
+	      <url>http://3.108.42.128:8081/repository/ccnc_m1v/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://172.31.40.189:8081/repository/flipkart-snapshot/</url>
+	      <name>RRUNDA Snapshot Nexus Repository </name>
+	      <url>http://3.108.42.128:8081/repository/ccnC_relese_mv1/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
