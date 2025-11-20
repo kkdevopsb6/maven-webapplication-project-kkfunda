@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <marquee>RR ENTERPRISES & TRDERS & Pavan Reddy  </marquee>
+    <marquee>RR ENTERPRISES & TRDERS & Pavan Reddy & inoovatation tower ,whitefiled ,bangaluru </marquee>
     <h3>Training | Development | Consulting</h3>
 </header>
 
