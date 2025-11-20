@@ -1,0 +1,26 @@
+node {
+    def maven = tool name: 'maven-3.9.5'
+    stage('git checkout'){
+        git branch: 'nov_build', credentialsId: 'cd6bff6f-0f29-4936-9210-7ca3caaf5f6f', url: 'https://github.com/rajuladevops/maven-webapplication-project-RRfunda.git'
+    }
+    
+    stage('maven build'){
+        sh "${maven}/bin/mvn clean package"
+    }
+    
+    stage('SonarQube'){
+        sh "${maven}/bin/mvn sonar:sonar"
+    }
+    
+     stage('Nexus storage reposi backup'){
+        sh "${maven}/bin/mvn deploy"
+    }
+    
+    stage('Tomcat'){
+        sh '''
+            curl -u chinna:chinna \
+            --upload-file /var/lib/jenkins/workspace/d2v/target/maven-web-application.war \
+            "http://65.1.149.161:8080/manager/text/deploy?path=/maven-web-application&update=true"
+        '''
+    }
+}
