@@ -46,15 +46,15 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA DEVOPS SRE Portal 🚀</h1>
-    <h3>Training | Development | Consulting</h3>
+    <marquee><h1>Rajula Brahmananda Reddy || RR ENTERPRISES </h1></marquee>
+    <h3>Credit cards | EMI | CC CARDS </h3>
 </header>
 
 <div class="container">
 
     <!-- Server Info -->
     <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
+        <h3>🌐 RR Server Side Information</h3>
         <hr>
         <%
             InetAddress inetAddress = InetAddress.getLocalHost();
