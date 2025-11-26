@@ -47,7 +47,7 @@
 
 <header>
     <marquee><h1>Rajula Brahmananda Reddy || RR ENTERPRISES </h1></marquee>
-    <h3>Training | Development | Consulting</h3>
+    <h3>Credit cards | EMI | CC CARDS </h3>
 </header>
 
 <div class="container">
